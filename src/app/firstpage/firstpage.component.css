@@ -1,0 +1,25 @@
+
+ 
+
+
+body {
+	margin: 0;
+	background-color: #ecfab6;
+}
+  
+ .mb{
+   font-size:small;
+ } 
+ .left-half {
+  background-color: #0bc533;
+float: left;
+  left: 0px;
+  width: 50%;
+}
+
+.right-half {
+  background-color: #b6701e;
+ float: left;;
+  right: 0px;
+  width: 50%;
+}

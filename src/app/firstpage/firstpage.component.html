@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+
+
+
+<form [formGroup]="bankdetails" (ngSubmit)="call()">
+  <div class="container">
+    <div class="row justify-content-center ">
+      <div class="col-md-6">
+        <span class="anchor" id="formContact"></span>
+
+        <div class="card card-outline-secondary">
+          <div class="card-body">
+
+            <fieldset>
+              <label class="mb" for="name2">CustomerName</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" formControlName="customer_name" id="name2" name="name"
+                    placeholder="Enter your  name" type="text">
+                </div>
+              </div>
+              <label class="mb">Bank Name</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" id="email2" name="" formControlName="bank_name"
+                    placeholder="Enter your bank name " type="text">
+                </div>
+              </div>
+              <label class="mb">Bank Address</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" id="email2" name="" formControlName="bank_address"
+                    placeholder="Enter your bank address " type="text">
+                </div>
+              </div>
+              <label class="mb">Account Number</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" id="email2" name="" matInput #input maxlength="12"
+                    placeholder="Ex.xxxxxxxxxxxx" formControlName="account_number" type="text">
+                  <mat-hint align="end">{{input.value?.length || 0}}/12</mat-hint>
+                </div>
+              </div>
+              <label class="mb">SWIFT Code</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" id="email2" name="" matInput #input maxlength="11" formControlName="swift"
+                    placeholder="Ex. xxxx" type="text">
+                </div>
+              </div>
+              <label class="mb">IBAN</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" id="email2" name="" matInput mask="SS-0000" #input maxlength="23"
+                    placeholder="Ex. AExxxx" formControlName="iban" type="text">
+                </div>
+              </div>
+              <label class="mb">Account Type</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+
+                  <mat-select formControlName="account_type">
+
+                    <mat-option value="savings">Savings</mat-option>
+                    <mat-option value="current">Current</mat-option>
+                  </mat-select>
+
+                </div>
+              </div>
+
+              <div>
+
+
+                <input type="file" name="image" (change)="onFileSelect($event)" />
+                <!-- <button type="submit">Upload</button> -->
+
+
+              </div>
+
+              <button class="btn btn-secondary btn-lg float-right" type="submit">Submit Details</button>
+            </fieldset>
+
+          </div>
+        </div><!-- /form contact -->
+      </div>
+      <!--/col-->
+    </div>
+  </div>
+</form>

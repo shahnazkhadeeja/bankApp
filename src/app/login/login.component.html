@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+  <div id="container">
+	<div id="left">
+	  <h1 id="welcome">Welcome</h1>
+	  <p id="lorem">
+		You can login here<br>
+		 </p>
+	</div>
+	<div id="right">
+	  <h1 id="login">LogIn</h1><br>
+	  <form [formGroup]="loginForm" (ngSubmit)="login()">
+	  <input type="text" id="username" formControlName="username" class="client-info">
+	  <label for="email">Username</label>
+	  <input type="password" id="password" formControlName="password" class="client-info">
+	  <label for="password">Password</label>
+	  <button id="submit" class="client-info" >Login</button> 
+	</form>
+	</div>
+
+  </div>
+  

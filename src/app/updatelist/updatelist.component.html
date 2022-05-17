@@ -1,0 +1,85 @@
+
+<app-navbar></app-navbar>
+
+    <body class="hm-gradient">
+    
+        <main>
+            <form  [formGroup]="bankupdate">
+            <div class="container mt-4 ">
+                     
+                    <!-- Grid column -->
+                    <div class="col-6 ">
+                        <div class="card ripe-malinka-gradient form-white">
+                            
+                            <div class="card-body">
+                                <!-- Form register -->
+                                
+                                    <h2 class="text-center font-up font-bold py-4 white-text">Edit Details:</h2>
+                                    <div class="md-form">
+                                        <label for="orangeForm-name2">customer name</label>
+                                        <i class="-user prefix white-text"></i>
+                                        <input type="text" id="orangeForm-name2" class="form-control" formControlName="customer_name">
+                                        
+                                    </div>
+                                    <div class="md-form">
+                                        <label for="orangeForm-email2">Bank Name</label>
+                                        <i class="fa fa-envelope prefix white-text"></i>
+                                        <input type="text" id="orangeForm-email2" class="form-control" formControlName="bank_name" >
+                                        
+                                    </div>
+                                    <div class="md-form">
+                                        <label for="orangeForm-pass2">Bank Address</label>
+                                        <i class="fa fa-lock prefix white-text"></i>
+                                        <input type="text" id="orangeForm-pass2" class="form-control" formControlName="bank_address">
+                                        
+                                    </div>
+                                    
+
+                                    <div class="md-form">
+                                        <label for="orangeForm-pass2">Account Number</label>
+                                        <i class="fa fa-lock prefix white-text"></i>
+                                        <input type="text" id="orangeForm-pass2" class="form-control" formControlName="account_number">
+                                       
+                                    </div>
+
+                                    <div class="md-form">
+                                        <label for="orangeForm-pass2">Iban </label>
+                                        <i class="fa fa-lock prefix white-text"></i>
+                                        <input type="text" id="orangeForm-pass2" class="form-control" formControlName="iban">
+                                       
+                                    </div>
+
+
+                                    <div class="md-form">
+                                        <label for="orangeForm-pass2">SWIFT</label>
+                                        <i class="fa fa-lock prefix white-text"></i>
+                                        <input type="text" id="orangeForm-pass2" class="form-control" formControlName="swift">
+                                       
+                                    </div> 
+                                    <div class="md-form">
+                                        <label for="orangeForm-pass2">Account Type</label>
+                                        <i class="fa fa-lock prefix white-text"></i>
+                                        <input type="text" id="orangeForm-pass2" class="form-control" formControlName="account_type">
+                                        
+                                    </div>       
+                                    
+                                    <div class="text-center">
+                                        <button class="btn btn-info"(click)="update()">Edit</button>
+                                    </div>
+
+                               
+                                <!-- Form register -->
+                            </div>
+                       
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    </div>
+                
+                </form>
+                    
+        </main>
+      
+    </body>
+

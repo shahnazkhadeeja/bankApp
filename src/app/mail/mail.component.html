@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="mail-box">
+
+    <aside class="lg-side">
+      <div class="inbox-head">
+        <div class="d-flex">
+          <form action="#" class="pull-right position">
+            <div class="input-append">
+              <input type="text" class="sr-input" placeholder="Search Mail">
+              <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+          <span class="filler" ></span>
+          <mat-spinner ></mat-spinner>
+          
+          <!-- <div class="spinner-border" role="status" *ngIf="loader"> -->
+            <!-- <span class="sr-only">Loading...</span> -->
+          </div>
+          <!-- <p class="spinner-grow text-warning" *ngIf="loader" >Loading...</p> -->
+        </div>
+      <!-- </div> -->
+      <div class="inbox-body p-0">
+
+        <table class="table table-inbox table-hover">
+          <tbody>
+            <tr class="unread" *ngFor="let item of emaildata">
+              <td class="inbox-small-cells">
+                <input type="checkbox" class="mail-checkbox">
+              </td>
+              <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+              <td class="view-message  dont-show">{{item.from}}</td>
+              <td class="view-message ">{{item.subject}}</td>
+              <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+              <td class="view-message  text-right">{{item.datetime}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <mat-paginator [length]="resultsLength" (page)="paginate()" pageSize="5"></mat-paginator>
+
+      </div>
+    </aside>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="d-flex">
+    <span class="filler" ></span>
+  <mat-icon class="close" mat-button (click)="onDismiss()" >close</mat-icon>
+  </div>
+  <div class="card bg-light mb-3" style="width: 100%;">
+    <img class="card-img-top mx-auto" src="https://dreamvilla.life/wp-content/uploads/2017/07/dummy-profile-pic.png" style="height:200px;width:240px;"alt="Card image cap">
+    <div class="card-body mx-auto">
+      <h2 class="card-title">{{this.data.customer_name}}</h2>
+      <h5 class="card-text">Bank Name:{{this.data.bank_name}}</h5>
+      <h5 class="card-text">Bank Address:{{this.data.bank_address}}</h5>
+      <h5 class="card-text">Account Number:{{this.data.account_number}}</h5>
+      <h5 class="card-text">Iban:{{this.data.iban}}</h5>
+      <h5 class="card-text">SWIFT:{{this.data.swift}}</h5>
+      <h5 class="card-text">Account Type{{this.data.account_type}}</h5>
+    </div>
